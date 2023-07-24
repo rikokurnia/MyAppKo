@@ -319,8 +319,41 @@
       background-positon-x: 0px;
     }
   }
+
   
-  @media (max-width: 768px) {
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    .huruf {
+      font-size: 1.2rem;
+      margin: 200px 20px; /* Adjust the margins as needed */
+      text-align: center;
+    }
+  
+    .articles {
+      grid-template-columns: 1fr; /* Adjust the number of columns as needed */
+    }
+  
+    .button {
+      max-width: 270px;
+      margin: 30px;
+    }
+  
+    .footer {
+      padding: 8px;
+      font-size: 0px;
+    }
+  
+    .wave {
+      margin-top: 70px;
+    }
+  }
+  
+  
+  /* @media (max-width: 768px) {
     .button {
       max-width: 240px;
       margin-left: 66px;
@@ -336,6 +369,6 @@
     .wave {
       margin-top: 70px;
     }
-  }
+  } */
   
   
