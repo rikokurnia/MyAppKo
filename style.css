@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgb(121, 9, 9) 35%, rgb(3, 41, 46) 100%);
+  font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+.nav,
+.menu {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.jumbotron {
+  font-size: 20px;
+  padding: 30px;
+  background-color: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgb(121, 9, 9) 35%, rgb(3, 41, 46) 100%);
+  text-align: center;
+  color: rgb(224, 210, 210);
+}
+
+.nav {
+  position: relative;
+  padding: 16px;
+  transition: 0.5s;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 20px 32px rgba(0, 0, 0, .2);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.nav input:checked~.menu {
+  width: 450px;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: rgb(224, 210, 210);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.menu li a:hover {
+  color: #797a7a;
+}
+
+.nav input {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.nav span {
+  position: absolute;
+  left: 30px;
+  width: 30px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.nav input:checked~span {
+  background-color: #cc4747;
+}
+
+.nav span:nth-child(2) {
+  transform: translateY(-8px);
+}
+
+.nav input:checked~span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.nav span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.nav input:checked~span:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px;
+  }
+
+  .menu {
+   flex-direction: column;
+  }
+
+  .nav input:checked~.menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu li {
+    margin: 8px 0;
+  }
+}

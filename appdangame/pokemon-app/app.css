@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #200505;
+}
+
+.to-top{
+	color:white;
+	padding-top:1.8em;
+    top: 65px;
+	display:inline-block;/* or block */
+	position:relative;
+    border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:red;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
+.container {
+    width: 350px;
+    border: 2px dotted rgb(122, 25, 25);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container p {
+    color: #923e3e;
+    font-size: 14px;
+    text-align: center;
+}
+
+#card {
+    position: relative;
+    width: 100%;
+    padding: 30px 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+#card img {
+    display: block;
+    width: 100px;
+    max-height: 200px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.hp {
+    width: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 8x 0;
+    border-radius: 30px;
+    margin-left: auto;
+    font-weight: 400;
+}
+
+.poke-name {
+    text-align: center;
+    font-weight: 600;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 40px 0;
+}
+
+.hp span, 
+.types span {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+}
+
+.types span {
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.stats {
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    text-align: center;
+}
+
+.stats p {
+    color: #404060;
+}
+
+#btn {
+    display: block;
+    padding: 15px 60px;
+    font-size: 16px;
+    background-color: #831b1b;
+    color: #ffffff;
+    position: relative;
+    margin: 30px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #858080;
+    color: #eaee0e;
+    transform: translate(-3px, -5px);
+    box-shadow: 7px 7px 5px black;
+}
+
+@media (max-width: 768px) {
+    .to-top {
+        display: none;
+    }
+}
